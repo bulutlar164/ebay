@@ -27,10 +27,7 @@ import ProductsDizi from '~~/interfaces/ProductsDizi';
     const urun = ref(Array<ProductsDizi>)
     const {id} = useRoute().params
     const {data} = useFetch("/api/sliderData");
-    
-    function addtoCart(){
-        
-    }
+
     
     //zeki olmak mükemmel bir detay
 </script>

@@ -15,6 +15,7 @@
 </template>
 
 <script lang="ts" setup>
+
 import mainContent from "/components/mainContent.vue"
 import mainContentimgVue from "/components/mainContentimg.vue"
 import mainContentSlider from "/components/mainContentSlider.vue"
@@ -25,4 +26,5 @@ import mainContentBrands from "/components/mainContentBrands.vue"
 import mainContentBrandsText from "/components/mainContentBrandsText.vue"
 import mainContentDailySliderText from "/components/mainContentDailySliderText.vue"
 import ebayFooter from "/components/ebayFooter.vue"
+
 </script>

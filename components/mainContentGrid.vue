@@ -2,10 +2,12 @@
     <div>
         <ul class="mainContentGrid-ul">
             <li v-for="item in data.nesne" class="mainContentGrid-li">
-                <form class="mainContentGrid-form">
-                    <img class="mainContentGrid-img" :src="item.img">
-                    <h1 class="mainContentGrid-h1">{{ item.name }}</h1>
-                </form>
+                <NuxtLink>
+                    <form class="mainContentGrid-form">
+                        <img class="mainContentGrid-img" :src="item.img">
+                        <h1 class="mainContentGrid-h1">{{ item.name }}</h1>
+                    </form>
+                </NuxtLink>
             </li>
         </ul>
     </div>
