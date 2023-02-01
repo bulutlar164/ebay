@@ -1,51 +1,20 @@
 <template>
     <div>
         <ul class="mainContentGrid-ul">
-            <li class="mainContentGrid-li">
+            <li class="mainContentGrid-li" v-for="item in data.nesne2">
                 <form class="mainContentGrid-form">
-                    <img class="mainContentGrid-img" src="https://i.ebayimg.com/images/g/T38AAOSwPGBeJrV1/s-l200.webp">
-                    <h1 class="mainContentGrid-h1">Apple</h1>
-                </form>
-            </li>
-            <li class="mainContentGrid-li">
-                <form class="mainContentGrid-form">
-                    <img class="mainContentGrid-img" src="https://i.ebayimg.com/images/g/BkwAAOSwpfpeJrV0/s-l200.webp">
-                    <h1 class="mainContentGrid-h1">Samsung</h1>
-                </form>
-            </li>
-            <li class="mainContentGrid-li">
-                <form class="mainContentGrid-form">
-                    <img class="mainContentGrid-img" src="https://i.ebayimg.com/images/g/uIAAAOSw7PNeJrV1/s-l200.webp">
-                    <h1 class="mainContentGrid-h1">Sony</h1>
-                </form>
-            </li>
-            <li class="mainContentGrid-li">
-                <form class="mainContentGrid-form">
-                    <img class="mainContentGrid-img" src="https://i.ebayimg.com/images/g/dLMAAOSwwS5eJrV0/s-l200.webp">
-                    <h1 class="mainContentGrid-h1">Ugreen</h1>
-                </form>
-            </li>
-            <li class="mainContentGrid-li">
-                <form class="mainContentGrid-form">
-                    <img class="mainContentGrid-img" src="https://i.ebayimg.com/images/g/pq0AAOSwOFFeJrV0/s-l200.webp">
-                    <h1 class="mainContentGrid-h1">Xiaomi</h1>
-                </form>
-            </li>
-            <li class="mainContentGrid-li">
-                <form class="mainContentGrid-form">
-                    <img class="mainContentGrid-img" src="https://i.ebayimg.com/images/g/atoAAOSwZzVeJrV1/s-l200.webp">
-                    <h1 class="mainContentGrid-h1">Nike</h1>
-                </form>
-            </li>
-            <li class="mainContentGrid-li">
-                <form class="mainContentGrid-form">
-                    <img class="mainContentGrid-img" src="https://i.ebayimg.com/images/g/j-MAAOSwaBJeJrV1/s-l200.webp">
-                    <h1 class="mainContentGrid-h1">Born Pretty</h1>
+                    <img class="mainContentGrid-img" :src="item.img">
+                    <h1 class="mainContentGrid-h1">{{ item.name }}</h1>
                 </form>
             </li>
         </ul>
     </div>
 </template>
+
+<script setup>
+import { useTestStore } from '~~/store/store';
+const data = useTestStore();
+</script>
 
 <style>
     .mainContentGrid-li{

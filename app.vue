@@ -1,57 +1,19 @@
 <template>
-
-    <headerDiv/>
-    <hr />
-    <headerTable/>
-    <hr/>
-    <mainContent/>
-    <mainContentimgVue/>
-    <mainContentText/>
-    <mainContentSlider/>
-    <mainContentCategoriesText/>
-    <mainContentGrid/>
-    <mainContentBrandsText/>
-    <mainContentBrands/>
-    <mainContentDailySliderText/>
-    <mainContentDailySlider/>
-    <mainContentimgVue/>
-    <hr class="app-hr"/>
-    <ebayFooter/>
-    
+  <div>
+    <NuxtLayout>
+        <NuxtLoadingIndicator/>
+        <NuxtPage/>
+        <template #nav>
+          <nav>
+            
+          </nav>
+        </template>
+    </NuxtLayout>
+  </div>
 </template>
 
-<script>
-import headerDiv from "./components/headerDiv.vue"
-import headerTable from "./components/headerTable.vue"
-import mainContent from "./components/mainContent.vue"
-import mainContentimgVue from "./components/mainContentimg.vue"
-import mainContentSlider from "./components/mainContentSlider.vue"
-import mainContentText from "./components/mainContentText.vue"
-import mainContentGrid from "./components/mainContentGrid.vue"
-import mainContentCategoriesText from "./components/mainContentCategoriesText.vue"
-import mainContentBrands from "./components/mainContentBrands.vue"
-import mainContentBrandsText from "./components/mainContentBrandsText.vue"
-import mainContentDailySlider from "./components/mainContentDailySlider.vue"
-import mainContentDailySliderText from "./components/mainContentDailySliderText.vue"
-import ebayFooter from "./components/ebayFooter.vue"
-export default{
-  components:{
-    headerDiv,
-    headerTable,
-    mainContent,
-    mainContentimgVue,
-    mainContentSlider,
-    mainContentText,
-    mainContentGrid,
-    mainContentCategoriesText,
-    mainContentBrands,
-    mainContentBrandsText,
-    mainContentDailySlider,
-    mainContentDailySliderText,
-    ebayFooter,
-  },
-}
-
+<script setup lang="ts">
+const route = useRoute();
 </script>
 
 <style>

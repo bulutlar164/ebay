@@ -8,6 +8,16 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "3.0.0"
+    "@kevinmarrec/nuxt-pwa": "^0.15.0",
+    "nuxt": "^3.0.0",
+    "nuxt-vitest": "^0.6.4"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.6",
+    "firebase-admin": "^11.5.0",
+    "pinia": "^2.0.29"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }

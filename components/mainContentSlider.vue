@@ -1,61 +1,20 @@
 <template>
-    <ul class="mainContentSlider-ul">
-        <li>
-            <form class="mainContentSlider-form">
-                <img class="mainContentSlider-img" src="https://i.ebayimg.com/images/g/NRAAAOSwkwJjZQXZ/s-l500.jpg"/>
-                <h1 class="mainContentSlider-h1">$89.53</h1>
-            </form>
-        </li>
-        <li>
-            <form class="mainContentSlider-form">
-                <img class="mainContentSlider-img" src="https://i.ebayimg.com/images/g/NRAAAOSwkwJjZQXZ/s-l500.jpg"/>
-                <h1 class="mainContentSlider-h1">$89.53</h1>
-            </form>
-        </li>
-        <li>
-            <form class="mainContentSlider-form">
-                <img class="mainContentSlider-img" src="https://i.ebayimg.com/images/g/NRAAAOSwkwJjZQXZ/s-l500.jpg"/>
-                <h1 class="mainContentSlider-h1">$89.53</h1>
-            </form>
-        </li>
-        <li>
-            <form class="mainContentSlider-form">
-                <img class="mainContentSlider-img" src="https://i.ebayimg.com/images/g/NRAAAOSwkwJjZQXZ/s-l500.jpg"/>
-                <h1 class="mainContentSlider-h1">$89.53</h1>
-            </form>
-        </li>
-        <li>
-            <form class="mainContentSlider-form">
-                <img class="mainContentSlider-img" src="https://i.ebayimg.com/images/g/NRAAAOSwkwJjZQXZ/s-l500.jpg"/>
-                <h1 class="mainContentSlider-h1">$89.53</h1>
-            </form>
-        </li>
-        <li>
-            <form class="mainContentSlider-form">
-                <img class="mainContentSlider-img" src="https://i.ebayimg.com/images/g/NRAAAOSwkwJjZQXZ/s-l500.jpg"/>
-                <h1 class="mainContentSlider-h1">$89.53</h1>
-            </form>
-        </li>
-        <li>
-            <form class="mainContentSlider-form">
-                <img class="mainContentSlider-img" src="https://i.ebayimg.com/images/g/NRAAAOSwkwJjZQXZ/s-l500.jpg"/>
-                <h1 class="mainContentSlider-h1">$89.53</h1>
-            </form>
-        </li>
-        <li>
-            <form class="mainContentSlider-form">
-                <img class="mainContentSlider-img" src="https://i.ebayimg.com/images/g/NRAAAOSwkwJjZQXZ/s-l500.jpg"/>
-                <h1 class="mainContentSlider-h1">$89.53</h1>
-            </form>
-        </li>
-        <li>
-            <form class="mainContentSlider-form">
-                <img class="mainContentSlider-img" src="https://i.ebayimg.com/images/g/NRAAAOSwkwJjZQXZ/s-l500.jpg"/>
-                <h1 class="mainContentSlider-h1">$89.53</h1>
-            </form>
+    <ul  class="mainContentSlider-ul">
+        <li v-for="item in data" >
+            <NuxtLink :to="'/products/'+item.id">
+                <form class="mainContentSlider-form">
+                    <img class="mainContentSlider-img" :src="item.ımg"/>
+                    <h1 class="mainContentSlider-h1">${{ item.price }}</h1>
+                </form>
+            </NuxtLink>
         </li>
     </ul>
 </template>
+
+
+<script lang="ts" setup>
+const {data} = await useFetch('/api/sliderData');
+</script>
 
 <style>
     .mainContentSlider-h1{
@@ -86,7 +45,3 @@
         background-color: whitesmoke;
     }
 </style>
-
-<script>
-
-</script>
