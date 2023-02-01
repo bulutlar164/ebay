@@ -6,5 +6,4 @@ node_modules
 .output
 .env
 dist
-nuxt3-firebase-ebay-firebase-adminsdk-95nrh-18af94bc6d.json
 sw.*
